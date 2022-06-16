@@ -50,7 +50,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: calc(16px + 3px);
-  width: 50%;
+  width: fit-content;
   max-width: 500px;
 }
 #site-page.blog {
@@ -70,14 +70,14 @@ footer {
   font-size: 0.7em;
 }
 #site-page .blog-container .sep {
-  width: 95%;
+  width: 98%;
   border-bottom: dashed;
   border-width: 1px;
   margin: 5px 0 8px 0;
   border-color: #b7b7b7;
 }
 #site-page .blog-container .content {
-  width: 95%;
+  width: 98%;
   margin: 15px 0 15px 0;
 }
 
