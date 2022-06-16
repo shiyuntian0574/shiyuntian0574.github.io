@@ -1,0 +1,124 @@
+$site-font:                     'Courier New', Courier, monospace;
+$site-font-size:                16px;
+$site-line-height:              calc(#{$site-font-size} + 3px);
+$site-text-color-primary:       #555555;
+$site-text-color-focus:         #93bcd9;
+
+/* base */
+html{
+    font-family: $site-font;
+    font-size: $site-font-size;
+    line-height: $site-line-height;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: $site-text-color-primary;
+    
+    .highlight {
+        color: $site-text-color-focus;
+    }
+
+    .sameline {
+        white-space: nowrap;
+    }
+
+    a {
+        color: $site-text-color-focus;
+        cursor: pointer;
+        border-bottom: solid;
+        border-width: 1.5px;
+    }
+}
+
+ul, li, a {
+    all: unset;
+}
+
+/* layout */
+header {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+footer {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#site-page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: $site-line-height;
+    width: 50%;
+    max-width: 500px;
+
+    &.blog {
+        height: 75%;
+        width: 50%;
+        max-width: 500px;
+        overflow-y: scroll;
+    }
+
+    .blog-container {
+        margin: 10px;
+        .title {
+            font-size: 1.3em;
+        }
+        .date {
+            margin: 5px 0 5px 0;
+            font-size: 0.7em;
+        }
+        .sep {
+            width: 95%;
+            border-bottom: dashed;
+            border-width: 1px;
+            margin: 5px 0 8px 0;
+            border-color: #b7b7b7;
+        }
+        .content {
+            width: 95%;
+            margin: 15px 0 15px 0;
+        }
+    }
+}
+
+
+
+/* main */
+#site-navigation {
+    a {
+        color:$site-text-color-primary;
+    }
+    
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 50%;
+    }
+
+    li {
+        cursor: pointer;
+        &.selected {
+            a {
+                color: $site-text-color-focus;
+                border-bottom: solid;
+                border-width: 2px;                
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,103 @@
+/* base */
+html {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  line-height: calc(16px + 3px);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: #555555;
+}
+p .highlight {
+  color: #93bcd9;
+}
+p .sameline {
+  white-space: nowrap;
+}
+p a {
+  color: #93bcd9;
+  cursor: pointer;
+  border-bottom: solid;
+  border-width: 1.5px;
+}
+
+ul, li, a {
+  all: unset;
+}
+
+/* layout */
+header {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#site-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: calc(16px + 3px);
+  width: 50%;
+  max-width: 500px;
+}
+#site-page.blog {
+  height: 75%;
+  width: 50%;
+  max-width: 500px;
+  overflow-y: scroll;
+}
+#site-page .blog-container {
+  margin: 10px;
+}
+#site-page .blog-container .title {
+  font-size: 1.3em;
+}
+#site-page .blog-container .date {
+  margin: 5px 0 5px 0;
+  font-size: 0.7em;
+}
+#site-page .blog-container .sep {
+  width: 95%;
+  border-bottom: dashed;
+  border-width: 1px;
+  margin: 5px 0 8px 0;
+  border-color: #b7b7b7;
+}
+#site-page .blog-container .content {
+  width: 95%;
+  margin: 15px 0 15px 0;
+}
+
+/* main */
+#site-navigation a {
+  color: #555555;
+}
+#site-navigation ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 50%;
+}
+#site-navigation li {
+  cursor: pointer;
+}
+#site-navigation li.selected a {
+  color: #93bcd9;
+  border-bottom: solid;
+  border-width: 2px;
+}
+
+/*# sourceMappingURL=styles.css.map */
